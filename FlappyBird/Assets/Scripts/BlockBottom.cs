@@ -8,7 +8,7 @@ public class BlockBottom : MonoBehaviour
     void Start()
     {
         UnityEngine.Random.InitState(DateTime.Now.Millisecond);
-        BlockMoveBottom = UnityEngine.Random.Range(0.0f, 2.5f);
+        BlockMoveBottom = UnityEngine.Random.Range(0.0f, 1.8f);
         transform.Translate(0, BlockMoveBottom, 0);
     }
 

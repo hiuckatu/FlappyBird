@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4ebe6daf450e33f409acaeded4ac6172
+guid: 7be015bf2c4ea044e84c98ba64b54204
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4150405671746537351
-    second: roulette_0
+      213: -9155930556845716593
+    second: D491F907-65C6-4676-B7D4-B6B23291F9CE_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: roulette_0
+      name: D491F907-65C6-4676-B7D4-B6B23291F9CE_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 560
-        height: 560
+        x: 111
+        y: 57
+        width: 876
+        height: 849
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 978f7c5080cc666c0800000000000000
-      internalID: -4150405671746537351
+      spriteID: f8b01133ba99fe080800000000000000
+      internalID: -9155930556845716593
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      D491F907-65C6-4676-B7D4-B6B23291F9CE_0: -9155930556845716593
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

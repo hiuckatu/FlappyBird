@@ -7,7 +7,7 @@ public class BlockTop : MonoBehaviour
     void Start()
     {
         UnityEngine.Random.InitState(DateTime.Now.Millisecond);
-        BlockMoveTop = UnityEngine.Random.Range(-2.5f, 0.0f);
+        BlockMoveTop = UnityEngine.Random.Range(-1.8f, 0.0f);
         transform.Translate(0, BlockMoveTop, 0);
     }
     void Update()

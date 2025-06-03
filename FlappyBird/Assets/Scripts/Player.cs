@@ -4,14 +4,31 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
-    float JUMP_VELOCITY = 349.3f; 
+    public static Player Instance;
 
-    Rigidbody2D _rigidbody;
     public BlockSpawner _blockspawner;
+
+    [SerializeField] private float JUMP_VELOCITY = 349.3f;
+    
+    private Animator anim;
+    private Rigidbody2D _rigidbody;
+    private EffectScale effectScale;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -20,7 +37,8 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _rigidbody.linearVelocity = Vector2.zero; 
-            _rigidbody.AddForce(new Vector2(0, JUMP_VELOCITY)); 
+            _rigidbody.AddForce(new Vector2(0, JUMP_VELOCITY));
+            anim.SetTrigger("Jump");
         }
     }
 
@@ -60,7 +78,14 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        effectScale.PlayerDeath();
+
         Destroy(_blockspawner);
+        Destroy(gameObject);
+    }
+
+    public void SetEffectScale(EffectScale effectScale)
+    {
+        this.effectScale = effectScale;
     }
 }
